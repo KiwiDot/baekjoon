@@ -8,7 +8,7 @@ check = True
 
 for i in range(N-1):
     s = put().strip()
-    check2 = False
+    check2 = False      # 탑을 쌓을 수 있다면 
 
     for m in range(1, M+1):
         if S[:m] == s[-m:] or S[-m:] == s[:m]:
