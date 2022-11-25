@@ -2,6 +2,6 @@
 import sys
 put = sys.stdin.readline
 
-r = int(put())
+r = put().strip()
 
 print(r, 1)
