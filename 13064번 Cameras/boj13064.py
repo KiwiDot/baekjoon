@@ -6,24 +6,22 @@ n = int(put())
 
 while n:
     n -= 1
-    num = put().strip()
+    number = put().strip()
+    n4 = number[4]
+    num = number[:4] + number[5:]
     check = True
 
-    # 맨 앞 두 자리는 동일한 숫자여야 한다.
-    if num[0] != num[1] or not num[0].isdigit() or '0' == num[0]:
+    if num[0] != num[1]:
         check = False
 
-    # 세 네 번째 자리가 두 자리 숫자여야 한다.
-    if not num[2:4].isdigit() or '0' in num[2:4]:
+    if not num.isdigit():
         check = False
 
-    # 다섯 번째 자리가 대문자여야 한다.
-    if not num[4].isalpha() or num[4].islower():
+    if '0' in num:
         check = False
 
-    # 뒤 세 자리가 숫자여야 한다.
-    if not num[5:].isdigit() or '0' in num[5:]:
+    if not n4.isalpha() or n4.islower():
         check = False
 
     if check:
-        print(num)
+        print(number)
